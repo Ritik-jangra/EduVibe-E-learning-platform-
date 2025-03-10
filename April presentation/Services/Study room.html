@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduVibe Study Room</title>
+    <style>
+        body {
+            background: #121212; /* Dark background */
+            color: #e0e0e0; /* Light gray text color */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #64b5f6; /* Electric blue heading */
+        }
+
+        h2 {
+            margin-top: 30px;
+            border-bottom: 1px solid #424242; /* Dark gray border */
+            padding-bottom: 5px;
+            color: #9ccc65; /* Neon green heading */
+        }
+
+        .section {
+            background-color: #212121; /* Darker gray background for sections */
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #424242; /* Dark gray border */
+        }
+
+        .resource {
+            background-color: #282828; /* Slightly lighter gray background for resources */
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .resource a {
+            color: #00bcd4; /* Cyan link color */
+            text-decoration: none;
+        }
+
+        .resource a:hover {
+            text-decoration: underline;
+        }
+
+        .timer {
+            text-align: center;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        .timer-controls button {
+            background-color: #00bcd4; /* Cyan button color */
+            color: #212121; /* Dark text color for button */
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .timer-controls button:hover {
+            background-color: #00acc1; /* Slightly darker cyan on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>EduVibe Study Room</h1>
+        <p style="text-align: center;">A focused environment for your learning journey.</p>
+
+        <div class="section">
+            <h2>Resources</h2>
+            <div class="resource">
+                <h3><a href="#">Study Material 1</a></h3>
+                <p>Description of study material 1.</p>
+            </div>
+            <div class="resource">
+                <h3><a href="#">Study Material 2</a></h3>
+                <p>Description of study material 2.</p>
+            </div>
+            <div class="resource">
+                <h3><a href="#">Study Material 3</a></h3>
+                <p>Description of study material 3.</p>
+            </div>
+        </div>
+
+        <div class="section timer">
+            <h2>Focus Timer</h2>
+            <div id="timer-display">25:00</div>
+            <div class="timer-controls">
+                <button id="start-timer">Start</button>
+                <button id="pause-timer">Pause</button>
+                <button id="reset-timer">Reset</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Tips for Effective Studying</h2>
+            <ul>
+                <li>Create a dedicated study space.</li>
+                <li>Minimize distractions.</li>
+                <li>Set realistic goals.</li>
+                <li>Take breaks regularly.</li>
+                <li>Practice active recall.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Timer functionality
+        const timerDisplay = document.getElementById("timer-display");
+        const startTimerBtn = document.getElementById("start-timer");
+        const pauseTimerBtn = document.getElementById("pause-timer");
+        const resetTimerBtn = document.getElementById("reset-timer");
+
+        let startTime = 25 * 60; // 25 minutes in seconds
+        let currentTime = startTime;
+        let timerInterval;
+
+        function updateDisplay() {
+            const minutes = Math.floor(currentTime / 60);
+            const seconds = currentTime % 60;
+            timerDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        function startTimer() {
+            clearInterval(timerInterval);
+            timerInterval = setInterval(() => {
+                currentTime--;
+                updateDisplay();
+                if (currentTime <= 0) {
+                    clearInterval(timerInterval);
+                    alert("Time's up!");
+                }
+            }, 1000);
+        }
+
+        function pauseTimer() {
+            clearInterval(timerInterval);
+        }
+
+        function resetTimer() {
+            clearInterval(timerInterval);
+            currentTime = startTime;
+            updateDisplay();
+        }
+
+        startTimerBtn.addEventListener("click", startTimer);
+        pauseTimerBtn.addEventListener("click", pauseTimer);
+        resetTimerBtn.addEventListener("click", resetTimer);
+
+        updateDisplay(); // Initial display
+    </script>
+</body>
+</html>

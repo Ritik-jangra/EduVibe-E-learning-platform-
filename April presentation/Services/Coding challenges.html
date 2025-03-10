@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduVibe - Coding Challenges</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(to right, #000428, #004e92);
+      color: #fff;
+    }
+    header {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    .section {
+      padding: 2rem;
+    }
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #00c6ff;
+      padding-bottom: 0.5rem;
+    }
+    .challenge-box {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1rem;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    .challenge-box h3 {
+      margin-top: 0;
+    }
+    .challenge-box p {
+      margin: 0.5rem 0;
+    }
+    .lang-tags {
+      margin-bottom: 1rem;
+    }
+    .lang-tags span {
+      background-color: #00c6ff;
+      padding: 0.2rem 0.6rem;
+      margin-right: 0.5rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+    }
+    .btn {
+      padding: 0.5rem 1rem;
+      background-color: #00c6ff;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+    .btn:hover {
+      background-color: #00a3cc;
+    }
+    .progress-tracking, .leaderboard, .coming-soon {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1rem;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+    }
+    .code-snippet {
+      background-color: #111;
+      color: #0f0;
+      padding: 0.8rem;
+      border-radius: 8px;
+      font-family: monospace;
+      overflow-x: auto;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>EduVibe - Coding Challenges</h1>
+  </header>
+
+  <div class="section">
+    <h2>Types of Coding Questions</h2>
+    <div class="challenge-box">
+      <h3>Easy - Print Even Numbers</h3>
+      <div class="lang-tags">
+        <span>Python</span><span>Java</span><span>C++</span>
+      </div>
+      <p>Write a program to print even numbers from 1 to 100.</p>
+      <div class="code-snippet">
+        for i in range(1, 101):
+          if i % 2 == 0:
+            print(i)
+      </div>
+    </div>
+
+    <div class="challenge-box">
+      <h3>Medium - Palindrome Checker</h3>
+      <div class="lang-tags">
+        <span>Python</span><span>JavaScript</span>
+      </div>
+      <p>Check whether a given string is a palindrome or not.</p>
+      <div class="code-snippet">
+        def is_palindrome(s):
+          return s == s[::-1]
+      </div>
+    </div>
+
+    <div class="challenge-box">
+      <h3>Hard - Find All Pairs With Given Sum</h3>
+      <div class="lang-tags">
+        <span>C++</span><span>Java</span>
+      </div>
+      <p>Find all pairs in an array that sum up to a target value.</p>
+      <div class="code-snippet">
+        int arr[] = {1, 4, 5, 7};
+        int sum = 6;
+        for(int i = 0; i < n; i++) {
+          for(int j = i+1; j < n; j++) {
+            if(arr[i] + arr[j] == sum) {
+              cout << arr[i] << "," << arr[j] << endl;
+            }
+          }
+        }
+      </div>
+    </div>
+  </div>
+
+  <div class="section progress-tracking">
+    <h2>Progress Tracking</h2>
+    <p>Track your challenge completion progress here.</p>
+    <progress value="30" max="100"></progress>
+  </div>
+
+  <div class="section leaderboard">
+    <h2>Leaderboard</h2>
+    <ul>
+      <li>1. Ritik - 350 pts</li>
+      <li>2. Anika - 300 pts</li>
+      <li>3. Yash - 270 pts</li>
+    </ul>
+  </div>
+
+  <div class="section coming-soon">
+    <h2>Submission System (Coming Soon)</h2>
+    <p>We are working on an automatic submission & test-case evaluation system.</p>
+  </div>
+</body>
+
+</html>

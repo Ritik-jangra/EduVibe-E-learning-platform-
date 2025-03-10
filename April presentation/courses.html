@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* Navigation Bar */
+nav {
+    width: 100%;
+    height: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: linear-gradient(90deg, #ff0080, #ff8c00);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    font-size: 13px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffde03;
+}
+
+/* Register Button (Now Separate) */
+#registerBtn {
+    
+    background: rgb(3, 179, 206);
+    font-size: 10px;
+    color: #b6fd04;
+    padding: 8px 15px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    margin-left: 20px; /* Push it to the right of links */
+}
+
+#registerBtn:hover {
+    color: #ff0080;
+    text-shadow: 0px 0px 10px #ff0080;
+}
+
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(to right, #D4145A, #FBB03B);
+            color: white;
+            width: 100%;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        body {
+    background: linear-gradient(135deg, #1A1A2E, #16213E, #0F3460); /* Dark blue & deep purple gradient */
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* 🔹 Adding a Glowing Effect (Neon Fog) */
+body::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    right: -50px;
+    bottom: -50px;
+    background: radial-gradient(circle, rgba(255, 0, 150, 0.2) 10%, rgba(0, 0, 0, 0.9) 80%);
+    z-index: -1;
+    filter: blur(80px);
+    opacity: 0.7;
+}
+
+        /* Course Grid */
+.course-container {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 50px 0;
+}
+
+/* 3-2-3-2 Pattern */
+.course:nth-child(4), 
+.course:nth-child(6), 
+.course:nth-child(10), 
+.course:nth-child(12) {
+    grid-column: span 2;
+    grid-row: span 2;
+    align-self: center;
+}
+
+/* Applying Same Style to 3rd & 4th Row */
+.course:nth-child(7), 
+.course:nth-child(8), 
+.course:nth-child(9) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.course:nth-child(10), 
+.course:nth-child(11) {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+/* Course Box Styling */
+.course {
+    border-radius: 15px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    position: relative;
+    transition: transform 0.4s, box-shadow 0.4s;
+    overflow: hidden;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0px 4px 20px rgba(255, 0, 128, 0.4);
+}
+
+/* Alternate Futuristic Colors */
+.course:nth-child(1) { background: linear-gradient(135deg, #ff4e50, #f9d423); }  /* Red-Orange */
+.course:nth-child(2) { background: linear-gradient(135deg, #6a11cb, #2575fc); }  /* Purple-Blue */
+.course:nth-child(3) { background: linear-gradient(135deg, #00c9ff, #92fe9d); }  /* Cyan-Green */
+.course:nth-child(4) { background: linear-gradient(135deg, #ff00ff, #ff8c00); }  /* Pink-Orange */
+.course:nth-child(5) { background: linear-gradient(135deg, #8e2de2, #4a00e0); }  /* Deep Purple */
+.course:nth-child(6) { background: linear-gradient(135deg, #12c2e9, #c471ed, #f64f59); }  /* Tricolor */
+.course:nth-child(7) { background: linear-gradient(135deg, #ff7e5f, #feb47b); }  /* Sunset */
+.course:nth-child(8) { background: linear-gradient(135deg, #ff4b1f, #1fddff); }  /* Red-Blue */
+.course:nth-child(9) { background: linear-gradient(135deg, #16bffd, #cb3066); }  /* Ocean-Red */
+.course:nth-child(10) { background: linear-gradient(135deg, #ff0080, #ff8c00); }  /* Neon Pink-Orange */
+.course:nth-child(11) { background: linear-gradient(135deg, #cc2b5e, #753a88); }  /* Dark Pink-Purple */
+.course:nth-child(12) { background: linear-gradient(135deg, #fc4a1a, #f7b733); }  /* Lava-Orange */
+
+/* Hover Effects */
+.course:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 25px rgba(255, 255, 255, 0.7);
+}
+
+/* Subcourses Inside Each Course */
+.subcourses {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.subcourse {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+
+    </style>
+
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo"><a href="index.html" style="text-decoration: none;">🚀 EduVibe</a></div>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="competition.html">Competitions</a></li>
+            <li><a href="internship & job.html">Internship/Jobs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            
+        </ul>
+
+       <!-- Register Button (Initially Visible) -->
+       <button id="registerBtn"><a href="EduVibe (Registration_page)/" style="text-decoration: none;">Register</a></button>
+
+</nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to EduVibe</h1>
+        <p>Your one-stop destination for quality online learning. Explore courses, enhance skills, and unlock new opportunities!</p>
+    </section>
+
+    <!-- Futuristic Course Section -->
+    <div class="course-container"></div>
+
+    <!-- Scripts -->
+    <!-- <script src="script.js"></script>
+    <script src="courses.js"></script> -->
+
+    <script>
+        // courses
+const courses = [
+    { name: "AI & Machine Learning", link:"E-courses/Aiml.html", subcourses: ["Neural Networks", "Deep Learning", "NLP", "Computer Vision"] },
+    { name: "Blockchain & Cryptocurrency", link:"E-courses/Blockchain.html", subcourses: ["Ethereum Development", "Smart Contracts", "Bitcoin Mining"] },
+    { name: "Cloud Computing & DevOps", link:"E-courses/Cloud.html", subcourses: ["AWS", "Azure", "Google Cloud"] },
+    { name: "Cybersecurity & Hacking", link:"E-courses/Cybersecurity.html", subcourses: ["Penetration Testing", "Network Security", "Cryptography"] },
+    { name: "Data Science & Big Data", link:"E-courses/Data science.html", subcourses: ["Data Visualization", "SQL & NoSQL", "Pandas & NumPy"] },
+    { name: "Data Analytics", link:"E-courses/Data analytics.html", subcourses: ["Data Collection", "Data Visualization", "Data Ethics"] },
+    { name: "Digital Marketing & SEO", link:"E-courses/Digital marketing.html", subcourses: ["SEO Strategies", "Social Media Marketing", "Google Ads"] },
+    { name: "Full-Stack Web Development", link:"E-courses/Full stack.html", subcourses: ["React, Vue", "Node.js, Django", "Database Management"] },
+    { name: "Game Development & AR/VR", link:"E-courses/Game development.html", subcourses: ["Unity 3D", "Unreal Engine", "AR/VR Development"] },
+    { name: "Graphic Design & UI/UX", link:"E-courses/Graphic designing.html", subcourses: ["Adobe Photoshop", "Figma", "UX Design"] },
+    { name: "Internet of Things (IoT)", link:"E-courses/IoT.html", subcourses: ["Embedded Systems", "IoT Security", "Arduino & Raspberry Pi"] },
+];
+
+const courseContainer = document.querySelector(".course-container");
+
+// Generate course boxes dynamically
+courses.forEach((course) => {
+    let courseDiv = document.createElement("a"); // Change div to <a> (anchor link)
+    courseDiv.classList.add("course");
+    courseDiv.href = course.link; // Add course-specific link
+    courseDiv.target = "_blank"; // Open in new tab
+    courseDiv.innerHTML = `<h3>${course.name}</h3>`;
+
+    let subcoursesDiv = document.createElement("div");
+    subcoursesDiv.classList.add("subcourses");
+
+    course.subcourses.forEach((subcourse) => {
+        let subDiv = document.createElement("div");
+        subDiv.classList.add("subcourse");
+        subDiv.innerText = subcourse;
+        subcoursesDiv.appendChild(subDiv);
+    });
+
+    courseDiv.appendChild(subcoursesDiv);
+    courseContainer.appendChild(courseDiv);
+});
+    </script>
+
+
+</body>
+</html>

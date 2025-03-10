@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+        <!-- Navigation Bar -->
+        <nav>
+            <div class="logo"><a href="index.html" style="text-decoration: none;">EduVibe</a></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="competition.html">Competitions</a></li>
+                <li><a href="internship & job.html">Internship/Jobs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+    
+           <!-- Register Button (Initially Visible) -->
+           <button id="registerBtn"><a href="EduVibe (Registration_page)/index.html" style="text-decoration: none;">Register</a></button>
+    </nav>
+
+        <!-- Hero-section -->
+        <section class="hero" style="background-image: url('Images/hero_section_final'); background-size: cover; background-position: center; display: flex; justify-content: center; align-items: center;">
+            <div class="hero-content">
+                <h1>Best Learning <br><span class="highlight">Education Platform</span><br> for students</h1>
+                <p>EduVibe is your personalized learning hub, where education meets innovation. Unlock your potential with
+                    interactive courses, real-time progress tracking.</p>
+        </section>
+
+        <!-- 🔹 Animated Search Bar -->
+<div class="search-bar">
+    <input type="text" id="searchInput" placeholder="What do you want to learn?">
+    <button class="search-btn" onclick="searchCourse()">Search Course</button>
+</div>
+</div>
+
+
+<!-- Services slider -->
+<div class="services-container">
+    <h2 class="services-title">Our Services</h2>
+    <div class="slider-wrapper">
+        <button id="prevBtn" class="nav-btn">&#10094;</button>
+        <div class="service-slider">
+            <div class="slider-track">
+                <div class="slide"><a href="Services/Career & Growth.html" style="text-decoration: none; color: white;">Career & Growth</a></div>
+                <div class="slide"><a href="Services/Coding challenges.html" style="text-decoration: none; color: white;">Coding Challenge</a></div>
+                <div class="slide"><a href="Services/Community & collaboration.html" style="text-decoration: none; color: white;">Community & Collaboration</a></div>
+                <div class="slide"><a href="Services/Courses.html" style="text-decoration: none; color: white;">Courses</a></div>
+                <div class="slide"><a href="Services/E-certificates.html" style="text-decoration: none; color: white;">E-Certificates</a></div>
+                <div class="slide"><a href="Services/Hackathon.html" style="text-decoration: none; color: white;">Hackathon</a></div>
+                <div class="slide"><a href="Services/Internship.html" style="text-decoration: none; color: white;">Internship</a></div>
+                <div class="slide"><a href="Services/Quiz battle.html" style="text-decoration: none; color: white;">Quiz Battle</a></div>
+                <div class="slide"><a href="Services/Study room.html" style="text-decoration: none; color: white;">Study Room</a></div>
+            </div>
+        </div>
+        <button id="nextBtn" class="nav-btn">&#10095;</button>
+    </div>
+</div>
+
+    <!-- Futuristic Service Section -->
+    <div class="service-container"></div>
+    <div class="community-container"></div>
+    <div class="community-slider">
+
+    <section class="invest-section">
+        <h2>Invest in Yourself</h2>
+        <p class="intro-text">Unlock your full potential by acquiring new skills, earning valuable credentials, and learning from the best experts in the field.</p>
+
+        <div class="invest-container">
+
+            <!-- Earn New Skills -->
+            <div class="invest-box">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Earn New Skills</h3>
+                <p>Develop practical knowledge and hands-on experience in trending technologies and subjects.</p>
+            </div>
+
+            <!-- Earn More Credentials -->
+            <div class="invest-box">
+                <i class="fas fa-certificate"></i>
+                <h3>Earn More Credentials</h3>
+                <p>Boost your career by obtaining industry-recognized certifications and accreditations.</p>
+            </div>
+
+            <!-- Learn from the Best -->
+            <div class="invest-box">
+                <i class="fas fa-user-graduate"></i>
+                <h3>Learn from the Best</h3>
+                <p>Get guidance from top professionals, mentors, and industry experts to excel in your field.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <h1 style="justify-content: center; color: rgb(43, 0, 255);">EduVibe Live</h1>
+
+<!-- Live Updates Section -->
+<div style="display: flex; justify-content: space-evenly">
+    <section class="live-updates">
+        <h2>🚀 Live Updates</h2>
+        <div class="updates-container" id="liveUpdatesBtn">
+            <div class="updates-content" id="updatesContent">
+                <p>🔹 New AI Chatbot Feature Coming Soon!</p>
+                <p>🔹 Leaderboard System Improved for Better Rankings</p>
+                <p>🔹 Coding Challenges Section Now Live!</p>
+                <p>🔹 Daily Streak Rewards Added 🎁</p>
+            </div>
+        </div>
+    </section>
+
+<!-- Live Updates Modal -->
+<div id="updatesModal" class="live-modal">
+    <div class="live-modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>📰 Latest Updates</h2>
+        <ul id="updatesList">
+            <li>🔹 New AI Chatbot Feature Coming Soon!</li>
+            <li>🔹 Leaderboard System Improved for Better Rankings</li>
+            <li>🔹 Coding Challenges Section Now Live!</li>
+            <li>🔹 Daily Streak Rewards Added 🎁</li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Daily Goal boxes -->
+<section class="focus-goals">
+    <div class="goal-box">
+        <h2>🎯 Focus on Your Goals</h2>
+        
+        <ul id="goal-list">
+            <li>
+                <input type="checkbox" class="goal-check"> 
+                <span>📖 Complete 5 Coding Challenges</span>
+            </li>
+            <li>
+                <input type="checkbox" class="goal-check"> 
+                <span>📝 Revise Data Structures & Algorithms</span>
+            </li>
+            <li>
+                <input type="checkbox" class="goal-check"> 
+                <span>🔥 Maintain a 7-Day Streak</span>
+            </li>
+        </ul>
+
+        <!-- Add Goal Container -->
+        <div class="add-goal-container">
+            <input type="text" id="new-goal" placeholder="✏️ Add your own goal...">
+            <button id="add-goal-btn">➕ Add Goal</button>
+        </div>
+
+        <!-- Task Progress Counter -->
+        <p id="task-progress">✅ Goals Completed: <span id="completed-count">0</span></p>
+    </div>
+</section>
+
+
+<!-- Student Achievements Section -->
+<section class="achievements-section">
+    <h2>🏆 Student Achievements</h2>
+    
+    <div class="achievements-container" id="achievements-list">
+        <!-- Example Achievements -->
+        <div class="achievement-wrapper">
+            <span class="close-btn">❌</span>
+            <div class="achievement-card">
+                <h3>🌟 100 Days Coding Streak</h3>
+                <p>Maintained a streak of coding daily for 100 days! 🚀</p>
+            </div>
+        </div>
+
+        <div class="achievement-wrapper">
+            <span class="close-btn">❌</span>
+            <div class="achievement-card">
+                <h3>🏅 Top 5 in Hackathon</h3>
+                <p>Secured a top 5 position in a national-level hackathon. 🏆</p>
+            </div>
+        </div>
+
+        <div class="achievement-wrapper">
+            <span class="close-btn">❌</span>
+            <div class="achievement-card">
+                <h3>🎯 Mastered Data Structures</h3>
+                <p>Successfully completed the Data Structures & Algorithms course. 📚</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Achievement Form -->
+    <div class="add-achievement">
+        <input type="text" id="new-achievement-title" placeholder="🏅 Achievement Title">
+        <input type="text" id="new-achievement-desc" placeholder="📜 Achievement Description">
+        <button id="add-achievement-btn">➕ Add Achievement</button>
+    </div>
+</div>
+
+<section class="latest-opportunities-section">
+    <h2>Latest Opportunities</h2>
+    <div class="latest-slider-container">
+        <div class="latest-slider">
+            <div class="latest-slide">Internship at Google</div>
+            <div class="latest-slide">Hackathon 2024 - AI Challenge</div>
+            <div class="latest-slide">Microsoft Student Program</div>
+            <div class="latest-slide">Open Source Project Funding</div>
+            <div class="latest-slide">Coding Competition - CodeChef</div>
+            <div class="latest-slide">Summer Training Program - IIT</div>
+            <div class="latest-slide">Amazon Cloud Scholarship</div>
+            <!-- Duplicate slides for infinite scrolling effect -->
+            <div class="latest-slide">Internship at Google</div>
+            <div class="latest-slide">Hackathon 2024 - AI Challenge</div>
+            <div class="latest-slide">Microsoft Student Program</div>
+        </div>
+    </div>
+</section>
+
+<!-- Trending-topics -->
+<section class="trending-section";>
+    <h2 style="font-size: px;">🔥 Latest Trending Topics</h2>
+
+    <div class="trending-slider">
+        <div class="trending-container" id="trending-list">
+            <!-- Preloaded Trending Topics -->
+            <div class="trending-card">
+                <h3>🌐 Artificial Intelligence</h3>
+                <p>AI is transforming industries with automation and smart decision-making.</p>
+            </div>
+            <div class="trending-card">
+                <h3>🚀 Quantum Computing</h3>
+                <p>Quantum computers have the potential to solve complex problems faster than traditional computers.</p>
+            </div>
+            <div class="trending-card">
+                <h3>💻 Cybersecurity</h3>
+                <p>As cyber threats rise, protecting data and networks is more crucial than ever.</p>
+            </div>
+            <div class="trending-card">
+                <h3>📡 5G Technology</h3>
+                <p>5G will enable faster internet speeds and open new opportunities in IoT and smart cities.</p>
+            </div>
+            <div class="trending-card">
+                <h3>🌍 Web3 & Blockchain</h3>
+                <p>Decentralization, smart contracts, and digital assets are reshaping the web.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add New Trending Topic -->
+    <div class="add-topic">
+        <input type="text" id="new-topic-title" placeholder="🔥 Topic Title">
+        <input type="text" id="new-topic-desc" placeholder="📜 Topic Description">
+        <button id="add-topic-btn">➕ Add Topic</button>
+    </div>
+</section>
+
+<!-- Who Can Use EduVibe Section -->
+
+<section class="who-can-use-section">
+    <h2>Who Can Use EduVibe</h2>
+
+    <div class="slider-wrapper">
+        <button id="prev" class="slider-btn">❮</button>
+
+        <div class="slider-container">
+            <div class="use-container">
+                <div class="user-group">
+                    <img src="Images/student.png" alt="Student">
+                    <p>Students & Learners</p>
+                </div>
+                <div class="user-group">
+                    <img src="Images/Mentor.png" alt="Teacher">
+                    <p>Teachers & Educators</p>
+                </div>
+                <div class="user-group">
+                    <img src="Images/tech_enthausiasts.png" alt="Developer">
+                    <p>Developers & Engineers</p>
+                </div>
+                <div class="user-group">
+                    <img src="Images/Researchers & Developers.png" alt="Researcher">
+                    <p>Researchers & Innovators</p>
+                </div>
+                <div class="user-group">
+                    <img src="Images/Competetive_exam.png" alt="Corporate">
+                    <p>Corporate Professionals</p>
+                </div>
+            </div>
+        </div>
+
+        <button id="next" class="slider-btn">❯</button>
+    </div>
+
+</section>
+
+<!-- FAQ Section -->
+<div class="faq-container"; style="margin-top: 100px; margin-left: 50px;">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>What is EduVibe?</span>
+        </div>
+        <div class="faq-answer">
+            <p>EduVibe is an e-learning platform that offers a variety of courses to help students enhance their skills.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>How do I enroll in a course?</span>
+        </div>
+        <div class="faq-answer">
+            <p>You can enroll by signing up, selecting a course, and making a payment (if applicable).</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>Are the courses free?</span>
+        </div>
+        <div class="faq-answer">
+            <p>EduVibe offers both free and paid courses. The details are mentioned in each course description.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>Can I get a certificate after course completion?</span>
+        </div>
+        <div class="faq-answer">
+            <p>Yes! After successfully completing a course, you will receive a certificate of completion.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>What types of courses are available?</span>
+        </div>
+        <div class="faq-answer">
+            <p>EduVibe offers courses in various fields like programming, data science, business, marketing, and more.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>Is there a refund policy?</span>
+        </div>
+        <div class="faq-answer">
+            <p>Yes, we offer a refund within 7 days of enrollment for eligible courses.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>Do instructors provide support?</span>
+        </div>
+        <div class="faq-answer">
+            <p>Yes, instructors and the EduVibe support team are available to answer your questions.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>Can I download course materials?</span>
+        </div>
+        <div class="faq-answer">
+            <p>Some courses provide downloadable materials, while others may require online access.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>How long do I have access to the courses?</span>
+        </div>
+        <div class="faq-answer">
+            <p>Most courses offer lifetime access, but some may have limited access periods.</p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section about">
+            <h2>About Us</h2>
+            <p>EduVibe is a premier e-learning platform designed for CSE students, offering interactive courses, competitive programming, and AI-driven assistance.</p>
+        </div>
+        <div class="footer-section different">
+            <h2>What Makes Us Different</h2>
+            <p>Our platform integrates AI-powered chatbots, real-time code execution, and personalized learning paths to enhance your coding journey.</p>
+        </div>
+        <div class="footer-section choose">
+            <h2>Why Choose Us</h2>
+            <ul>
+                <li>Expert-curated courses</li>
+                <li>Live coding competitions</li>
+                <li>Comprehensive learning materials</li>
+                <li>Community-driven discussions</li>
+            </ul>
+        </div>
+        <div class="footer-section contact">
+            <h2>Contact Us</h2>
+            <p>Email: support@eduvibe.com</p>
+            <p>Phone: +123 456 7890</p>
+            <p>Follow us on:
+                <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">LinkedIn</a>
+            </p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 EduVibe. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<!-- Back to Top Button -->
+<div id="backToTop">
+    ↑ Back to Top
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

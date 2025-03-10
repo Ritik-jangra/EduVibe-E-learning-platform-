@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - EduVibe</title>
+    <style>
+        /* Reset Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to right, #FF5733, #FFBD33);
+            color: white;
+        }
+
+        /* Navigation Bar */
+nav {
+    width: 100%;
+    height: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: linear-gradient(90deg, #ff0080, #ff8c00);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    font-size: 13px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffde03;
+}
+
+/* Register Button (Now Separate) */
+#registerBtn {
+    
+    background: rgb(3, 179, 206);
+    font-size: 10px;
+    color: #b6fd04;
+    padding: 8px 15px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    margin-left: 20px; /* Push it to the right of links */
+}
+
+#registerBtn:hover {
+    color: #ff0080;
+    text-shadow: 0px 0px 10px #ff0080;
+}
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(to right, #D4145A, #FBB03B);
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* About Us Section */
+        .about-section {
+            padding: 50px 20px;
+            text-align: center;
+            background: linear-gradient(to right, #8E2DE2, #4A00E0);
+        }
+
+        .about-section h2 {
+            font-size: 34px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 50px 20px;
+            text-align: center;
+            background: linear-gradient(to right, #00C9FF, #92FE9D);
+        }
+
+        .services-section h2 {
+            font-size: 34px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .service-box {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .service {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 12px;
+            width: 280px;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .service:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Our Team Section */
+        .team-section {
+            padding: 50px 20px;
+            text-align: center;
+            background: linear-gradient(to right, #FF512F, #DD2476);
+        }
+
+        .team-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .team-member {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            width: 230px;
+            transition: transform 0.3s;
+        }
+
+        .team-member:hover {
+            transform: scale(1.1);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 50px 20px;
+            text-align: center;
+            background: linear-gradient(to right, #FF0099, #493240);
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo"><a href="index.html" style="text-decoration: none;">🚀 EduVibe</a></div>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="#">Competitions</a></li>
+            <li><a href="#">Internship/Jobs</a></li>
+            <li><a href="#">Contact</a></li>
+            
+        </ul>
+
+       <!-- Register Button (Initially Visible) -->
+       <button id="registerBtn"><a href="EduVibe (Registration_page)/" style="text-decoration: none;">Register</a></button>
+
+</nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to EduVibe</h1>
+        <p>Your one-stop destination for quality online learning. Explore courses, enhance skills, and unlock new opportunities!</p>
+    </section>
+
+    <!-- About Us -->
+    <section class="about-section">
+        <h2>About Us</h2>
+        <p class="about-content">EduVibe is a leading e-learning platform dedicated to providing top-quality education across various fields. Our mission is to empower learners with knowledge and skills that help them succeed in their careers.</p>
+    </section>
+
+    <!-- Services -->
+    <section class="services-section">
+        <h2>Our Services</h2>
+        <div class="service-box">
+            <div class="service">
+                <h3>Live Classes</h3>
+                <p>Join interactive live classes led by industry experts.</p>
+            </div>
+            <div class="service">
+                <h3>Certification Courses</h3>
+                <p>Earn recognized certificates to boost your career.</p>
+            </div>
+            <div class="service">
+                <h3>24/7 Support</h3>
+                <p>Get assistance anytime from our dedicated support team.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Our Team -->
+    <section class="team-section">
+        <h2>Meet Our Team</h2>
+        <div class="team-container">
+            <div class="team-member">
+                <h3>Ritik</h3>
+                <p>Frontend developer</p>
+            </div>
+            <div class="team-member">
+                <h3>Atul Gulia</h3>
+                <p>Backenden developer</p>
+            </div>
+            <div class="team-member">
+                <h3>Nikhil Sharma</h3>
+                <p>Database management</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact-section">
+        <h2>Contact Us</h2>
+        <p class="contact-content">Have questions? Reach out to us at <strong>support@eduvibe.com</strong></p>
+    </section>
+
+</body>
+</html>

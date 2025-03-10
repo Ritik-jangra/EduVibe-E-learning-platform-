@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-color: #E6F0FA; */
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    /* background: #03f4fc; */
+    border-radius: 40px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.heading {
+    margin-left: -180px;
+    font-size: 30px;
+}
+
+.illustration img {
+    width: 500px;
+    height: 500px;
+    margin-left: 25px;
+    margin-top: 100px;
+    border-radius: 40px;
+}
+
+.form-container {
+    padding: 40px;
+    width: 350px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+.brand {
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.social-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.google-btn {
+    background-color: #DB4437;
+    color: white;
+}
+
+.facebook-btn {
+    background-color: #3B5998;
+    color: white;
+}
+
+.apple-btn {
+    background-color: rgb(245, 169, 6);
+}
+
+.separator {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.forgot-password {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+p a {
+    color: #007BFF;
+    text-decoration: none;
+}
